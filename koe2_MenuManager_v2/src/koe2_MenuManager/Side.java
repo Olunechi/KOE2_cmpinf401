@@ -6,9 +6,9 @@ package koe2_MenuManager;
  */
 public class Side {
 
-	String Name;
-	String description;
-	int calories;
+	private String Name;
+	private String description;
+	private int calories;
 	public Side (String name, String dscription,int clories) {
 		Name = name;
 		description = dscription;
