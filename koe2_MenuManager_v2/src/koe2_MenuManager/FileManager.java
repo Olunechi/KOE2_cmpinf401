@@ -13,27 +13,26 @@ public class FileManager {
 	 * 
 	 * @param fileName a String name
 	 * @return the ArrayList of entrees
+	 * @throws FileNotFoundException 
 	 */
-	public static ArrayList<Entree> readEntrees(String fileName) {
+	public static ArrayList<Entree> readEntrees(String fileName) throws Exception {
 		/////////// /**/*\*/*/ File file;
 		ArrayList<Entree> entrees = new ArrayList<Entree>();
-		try {
-			// file = new File(fileName);
-			Scanner scan = new Scanner(new File(fileName));
-			String entree = scan.nextLine();
+	
+			File file = new File(fileName);
+			Scanner scan = new Scanner(file);
+			//String entree = scan.nextLine();
 			int x = 0;
 			while (scan.hasNextLine()) {
-				Entree entry = new Entree(entree.split("@@")[0], entree.split("@@")[1],
-						Integer.parseInt(entree.split("@@")[2]));
+				String[] entreeSplit  = scan.nextLine().split("@@");
+				Entree entry = new Entree(entreeSplit[0], entreeSplit[1],
+						Integer.parseInt(entreeSplit[2]));
 				entrees.set(x, entry);
 				x++;
-				entree = scan.nextLine();
+			//	entree = scan.nextLine();
 			}
 			scan.close();
 
-		} catch (Exception a) {
-
-		}
 		return (entrees);
 	}
 
@@ -43,27 +42,26 @@ public class FileManager {
 	 * @param fileName a String name
 	 * @return the ArrayList of sides
 	 */
-	public static ArrayList<Side> readSides(String fileName) {
+	public static ArrayList<Side> readSides(String fileName) throws Exception {
 		ArrayList<Side> sides = new ArrayList<Side>();
-		try {
-			// file = new File(fileName);
-			Scanner scan = new Scanner(new File(fileName));
-			String side = scan.nextLine();
+			File file = new File(fileName);
+			Scanner scan = new Scanner(file);//new File(fileName));
+			//String side = scan.nextLine();
 			int x = 0;
 			while (scan.hasNextLine()) {
-				Side siid = new Side(side.split("@@")[0], side.split("@@")[1], Integer.parseInt(side.split("@@")[2]));
+				String[] sideSplit  = scan.nextLine().split("@@",2);
+				Side siid = new Side(sideSplit[0], sideSplit[1], Integer.parseInt(sideSplit[2]));
 				sides.set(x, siid);
 				x++;
-				side = scan.nextLine();
+				//side = scan.nextLine();
 			}
-			System.out.println(sides);
 
 			scan.close();
 
-		} catch (Exception a) {
 
+			System.out.println(sides);
 			System.out.println("blood");
-		}
+		
 		return (sides);
 	}
 
@@ -73,9 +71,9 @@ public class FileManager {
 	 * @param fileName a String name
 	 * @return the ArrayList of salads
 	 */
-	public static ArrayList<Salad> readSalads(String fileName) {
+	public static ArrayList<Salad> readSalads(String fileName) throws FileNotFoundException{
 		ArrayList<Salad> salads = new ArrayList<Salad>();
-		try {
+	
 			// file = new File(fileName);
 			Scanner scan = new Scanner(new File(fileName));
 			String salad = scan.nextLine();
@@ -88,9 +86,6 @@ public class FileManager {
 			}
 			scan.close();
 
-		} catch (Exception a) {
-
-		}
 		return (salads);
 	}
 
@@ -100,9 +95,8 @@ public class FileManager {
 	 * @param fileName a String name
 	 * @return the ArrayList of desserts
 	 */
-	public static ArrayList<Dessert> readDesserts(String fileName) {
+	public static ArrayList<Dessert> readDesserts(String fileName) throws FileNotFoundException {
 		ArrayList<Dessert> desserts = new ArrayList<Dessert>();
-		try {
 			// file = new File(fileName);
 			Scanner scan = new Scanner(new File(fileName));
 			String dessert = scan.nextLine();
@@ -116,9 +110,6 @@ public class FileManager {
 			}
 			scan.close();
 
-		} catch (Exception a) {
-
-		}
 		return (desserts);
 	}
 

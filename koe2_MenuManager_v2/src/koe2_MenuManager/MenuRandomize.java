@@ -11,7 +11,7 @@ public class MenuRandomize {
 	ArrayList<Side> sides;
 	ArrayList<Dessert> desserts;
 
-	MenuRandomize(String entreeFile, String sideFile, String saladFile, String dessertFile) {
+	MenuRandomize(String entreeFile, String sideFile, String saladFile, String dessertFile) throws Exception {
 
 		entrees = FileManager.readEntrees(entreeFile);
 		salads = FileManager.readSalads(saladFile);
