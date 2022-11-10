@@ -23,8 +23,8 @@ public class FileManager {
 			String entree = scan.nextLine();
 			int x = 0;
 			while (scan.hasNextLine()) {
-				Entree entry = new Entree(entree.split("@")[0], entree.split("@")[1],
-						Integer.parseInt(entree.split("@")[2]));
+				Entree entry = new Entree(entree.split("@@")[0], entree.split("@@")[1],
+						Integer.parseInt(entree.split("@@")[2]));
 				entrees.set(x, entry);
 				x++;
 				entree = scan.nextLine();
@@ -51,7 +51,7 @@ public class FileManager {
 			String side = scan.nextLine();
 			int x = 0;
 			while (scan.hasNextLine()) {
-				Side siid = new Side(side.split("@")[0], side.split("@")[1], Integer.parseInt(side.split("@")[2]));
+				Side siid = new Side(side.split("@@")[0], side.split("@@")[1], Integer.parseInt(side.split("@@")[2]));
 				sides.set(x, siid);
 				x++;
 				side = scan.nextLine();
@@ -81,7 +81,7 @@ public class FileManager {
 			String salad = scan.nextLine();
 			int x = 0;
 			while (scan.hasNextLine()) {
-				Salad slad = new Salad(salad.split("@")[0], salad.split("@")[1], Integer.parseInt(salad.split("@")[2]));
+				Salad slad = new Salad(salad.split("@@")[0], salad.split("@@")[1], Integer.parseInt(salad.split("@@")[2]));
 				salads.set(x, slad);
 				x++;
 				salad = scan.nextLine();
@@ -108,8 +108,8 @@ public class FileManager {
 			String dessert = scan.nextLine();
 			int x = 0;
 			while (scan.hasNextLine()) {
-				Dessert desrt = new Dessert(dessert.split("@")[0], dessert.split("@")[1],
-						Integer.parseInt(dessert.split("@")[2]));
+				Dessert desrt = new Dessert(dessert.split("@@")[0], dessert.split("@@")[1],
+						Integer.parseInt(dessert.split("@@")[2]));
 				desserts.set(x, desrt);
 				x++;
 				dessert = scan.nextLine();
