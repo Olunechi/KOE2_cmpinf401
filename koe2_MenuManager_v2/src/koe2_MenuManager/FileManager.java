@@ -21,13 +21,13 @@ public class FileManager {
 	
 			File file = new File(fileName);
 			Scanner scan = new Scanner(file);
-			//String entree = scan.nextLine();
+			//zzzxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxzzzzzszzzzzzxxxxxxxxxxzsssssssssssdzString entree = scan.nextLine();
 			int x = 0;
 			while (scan.hasNextLine()) {
 				String[] entreeSplit  = scan.nextLine().split("@@");
 				Entree entry = new Entree(entreeSplit[0], entreeSplit[1],
 						Integer.parseInt(entreeSplit[2]));
-				entrees.set(x, entry);
+				entrees.add(entry);	//entrees.set(x, entry);
 				x++;
 			//	entree = scan.nextLine();
 			}
@@ -49,9 +49,9 @@ public class FileManager {
 			//String side = scan.nextLine();
 			int x = 0;
 			while (scan.hasNextLine()) {
-				String[] sideSplit  = scan.nextLine().split("@@",2);
+				String[] sideSplit  = scan.nextLine().split("@@");
 				Side siid = new Side(sideSplit[0], sideSplit[1], Integer.parseInt(sideSplit[2]));
-				sides.set(x, siid);
+				sides.add(siid);//sides.set(x, siid);
 				x++;
 				//side = scan.nextLine();
 			}
@@ -59,8 +59,6 @@ public class FileManager {
 			scan.close();
 
 
-			System.out.println(sides);
-			System.out.println("blood");
 		
 		return (sides);
 	}
@@ -80,7 +78,7 @@ public class FileManager {
 			int x = 0;
 			while (scan.hasNextLine()) {
 				Salad slad = new Salad(salad.split("@@")[0], salad.split("@@")[1], Integer.parseInt(salad.split("@@")[2]));
-				salads.set(x, slad);
+				salads.add(slad);//.set(x, slad);
 				x++;
 				salad = scan.nextLine();
 			}
@@ -104,7 +102,7 @@ public class FileManager {
 			while (scan.hasNextLine()) {
 				Dessert desrt = new Dessert(dessert.split("@@")[0], dessert.split("@@")[1],
 						Integer.parseInt(dessert.split("@@")[2]));
-				desserts.set(x, desrt);
+				desserts.add(desrt);//desserts.set(x, desrt);
 				x++;
 				dessert = scan.nextLine();
 			}

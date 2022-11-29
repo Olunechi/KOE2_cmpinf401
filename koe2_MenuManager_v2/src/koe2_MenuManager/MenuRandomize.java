@@ -6,11 +6,19 @@ public class MenuRandomize {
 	/**
 	 * Class MenuRandomize author : Kenechi Ezekoye created: 11/02/2022
 	 */
-	ArrayList<Entree> entrees;
-	ArrayList<Salad> salads;
-	ArrayList<Side> sides;
-	ArrayList<Dessert> desserts;
-
+	private ArrayList<Entree> entrees;
+	private ArrayList<Salad> salads;
+	private ArrayList<Side> sides;
+	private 	ArrayList<Dessert> desserts;
+	
+	/**
+	 * Constructor MenuRandomize
+	 * 
+	 * @param entreeFile a String file name
+	 * @param sideFile a String file name
+	 * @param saladFile a String file name
+	 * @param dessertFile a String file name
+	 */
 	MenuRandomize(String entreeFile, String sideFile, String saladFile, String dessertFile) throws Exception {
 
 		entrees = FileManager.readEntrees(entreeFile);
