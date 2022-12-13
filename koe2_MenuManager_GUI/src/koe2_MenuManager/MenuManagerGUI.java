@@ -222,8 +222,8 @@ public class MenuManagerGUI {
 		frmChildWindow = new JFrame("Child Window");
 		frmChildWindow.setBounds(MenuManagerWindow.getX() + 20, MenuManagerWindow.getY() + 20, 500, 750);
 		frmChildWindow.setLayout(null);
-		int ecal = 0;int sidcal = 0;int salcal = 0;int descal = 0;
-		double epri = 0;double sidpri = 0;double salpri = 0;double despri = 0;
+		int ecal = 0;int sidcal = 0;int salcal = 0;int descal = 0; int totocal = 0;
+		double epri = 0;double sidpri = 0;double salpri = 0;double despri = 0; double totopri =0;
 
 		txtTextEnt = new JTextArea();
 		
@@ -298,11 +298,12 @@ txtTextDes.setEditable(false);
 				descal = a.getCalories(); despri = a.getPrice();}
 
 		}
-
-		toCal = new JLabel("Total calories: ");
+totocal = ecal+sidcal+salcal+descal;
+totopri = epri+salpri+sidpri+despri;
+		toCal = new JLabel("Total calories: "+totocal);
 		toCal.setBounds(lblEntree.getX(), lblDessert.getY() +txtTextEnt.getHeight() + 10, 150, lblEntree.getHeight());
 		frmChildWindow.getContentPane().add(toCal);
-		toPri = new JLabel("Total Price: $");
+		toPri = new JLabel("Total Price: $"+totopri);
 		toPri.setBounds(lblEntree.getX(), toCal.getY() +toCal.getHeight() + 10, 150, lblEntree.getHeight());
 		frmChildWindow.getContentPane().add(toPri);
 
