@@ -150,11 +150,11 @@ public class FileManager {
 
 	public static void writeMenu( String fileName, ArrayList<Menu> menus ) throws IOException {
 		FileWriter fw = new FileWriter(fileName);
-	MenuManager test = new  MenuManager("data/dishes.txt");
-	 menus = test.menuList();
-	 System.out.println(menus+"Max:  "+test.maxCaloriesMenu()+test.maxCaloriesMenu().totalCalories()+test.maxCaloriesMenu().description()+"Min:  "+test.minCaloriesMenu()+test.minCaloriesMenu().description()+test.minCaloriesMenu().totalCalories());
+//	MenuManager test = new  MenuManager("data/dishes.txt");
+//	 menus = test.menuList();
+//	 System.out.println(menus+"Max:  "+test.maxCaloriesMenu()+test.maxCaloriesMenu().totalCalories()+test.maxCaloriesMenu().description()+"Min:  "+test.minCaloriesMenu()+test.minCaloriesMenu().description()+test.minCaloriesMenu().totalCalories());
 	for(Menu x: menus) {
-		fw.write("Menu name: "+x+" Total Calories: "+x.totalCalories()+" total Price: "+x.totalPrice()+" Descripetion: "+x.description());
+		fw.write("Menu name: "+x+" Total Calories: "+x.totalCalories()+" total Price: "+x.totalPrice()+" Descripetion: "+x.description()+"\n");
 		}
 		fw.close();
 		

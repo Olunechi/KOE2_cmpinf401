@@ -2,9 +2,11 @@ package koe2_MenuManager;
 
 
 import java.awt.event.*;
-import java.io.FileNotFoundException;
+import java.util.ArrayList;
+
 import javax.swing.*;
 import javax.swing.border.*;
+import java.io.*;
 
 public class MenuManagerGUI {
 	private JFrame MenuManagerWindow;
@@ -12,9 +14,7 @@ public class MenuManagerGUI {
 	private JComboBox cboEntree, cboSide, cboSalad, cboDessert;
 	private JButton btnCreate, btnGenR, btnDetails, btnMin, btnMax, btnDel, btnSav;
 	private JTextArea txtTextMenus, txtTextEnt, txtTextSid, txtTextSal, txtTextDes;
-	
 	private JFrame frmChildWindow;
-	
 	private MenuManager MM;
 	
 	public MenuManagerGUI() throws FileNotFoundException {
@@ -22,13 +22,14 @@ public class MenuManagerGUI {
 		buildMenuManagerWindow();
 	}
 	
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	private void buildMenuManagerWindow() {
 		MenuManagerWindow = new JFrame("Menu Manager");
 		MenuManagerWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		MenuManagerWindow.setBounds(20, 20, 750, 750);
 		MenuManagerWindow.setLayout(null);
-		
+		ArrayList<Menu> menus =  new ArrayList<Menu>();
+
 		/*add border
 		Border byom = BorderFactory.createTitledBorder("Title");
 		 * JPanel panel = new JPanel();
@@ -179,8 +180,9 @@ public class MenuManagerGUI {
 						Salad salad = (Salad) findItemByName(selSalad);
 						Dessert dessert = (Dessert) findItemByName(selDessert);
 						Menu w = new Menu("New Menu",entree,side,salad,dessert);
+						menus.add(w);
 						System.out.println(entree+" "+side+" "+salad+" "+dessert+w.toString());
-						txtTextMenus.setText(txtTextMenus.getText()+w.toString()+"\n");
+						txtTextMenus.setText(txtTextMenus.getText()+w+"\n");
 				
 			}
 		});
@@ -190,7 +192,8 @@ public class MenuManagerGUI {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 			Menu w =  MM.randomMenu("New Menu");
-			txtTextMenus.setText(txtTextMenus.getText()+w.toString()+"\n");
+			menus.add(w);
+			txtTextMenus.setText(txtTextMenus.getText()+w+"\n");
 				
 			}
 		});
@@ -201,7 +204,8 @@ public class MenuManagerGUI {
 			public void actionPerformed(ActionEvent e) {
 			Menu w =  MM.maxCaloriesMenu();
 			txtTextMenus.setText(txtTextMenus.getText()+w.toString()+"\n");
-				
+			menus.add(w);
+
 			}
 		});
 
@@ -210,7 +214,17 @@ public class MenuManagerGUI {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 			Menu w =  MM.minCaloriesMenu();
-			txtTextMenus.setText(txtTextMenus.getText()+w.toString()+"\n");
+			txtTextMenus.setText(txtTextMenus.getText()+w+"\n");
+			menus.add(w);
+
+			}
+		});
+
+		btnDel.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+			txtTextMenus.setText("");
 				
 			}
 		});
@@ -222,7 +236,20 @@ public class MenuManagerGUI {
 				
 			}
 		});
+	
+		btnSav.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e){
+				try {
+					FileManager.writeMenu("data/menus.txt", menus);
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}				
+			}
+		});
 		
+	
 	}
 	private void createChildWindow() {
 		frmChildWindow = new JFrame("Child Window");
@@ -318,6 +345,7 @@ totopri = epri+salpri+sidpri+despri;
 	
 
 public static void main(String[] args) throws FileNotFoundException {
+@SuppressWarnings("unused")
 MenuManagerGUI gui = new MenuManagerGUI();
 }
 

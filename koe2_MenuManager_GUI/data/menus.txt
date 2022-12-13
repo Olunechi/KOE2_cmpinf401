@@ -1,0 +1,16 @@
+Menu name: New Menu Total Calories: 1295 total Price: 27.5 Descripetion: Entree: Griller Steak. Carefully selected prime quality steak griller to the point of your preference
+Side: Rice. Plain rice
+Salad: Potato Salad. Potato Salad
+Dessert: Fruit Salad. Oranges, bananas, apples, grapes, strawberries
+Menu name: New Menu Total Calories: 1320 total Price: 36.2 Descripetion: Entree: Sirloin Steak. A delicious piece of 1/2 a pound of our carefully selected meat grilled and seasoned. Choose how much you want it cooked
+Side: Rice. Plain rice
+Salad: Mixed Vegetables. Includes small tomatoes, lettuce, cucumber, spinach and arugula
+Dessert: Ice Cream. Choose among vanilla, mango, pineapple, chocolate and orange ice cream
+Menu name: minMenu Total Calories: 860 total Price: 28.2 Descripetion: Entree: Curry Chicken. Curry marinated chicken, cooked slowly in wood fire oven
+Side: Quinoa. Quinoa
+Salad: Mixed Vegetables. Includes small tomatoes, lettuce, cucumber, spinach and arugula
+Dessert: Fruit Salad. Oranges, bananas, apples, grapes, strawberries
+Menu name: maxMenu Total Calories: 1550 total Price: 35.7 Descripetion: Entree: Sirloin Steak. A delicious piece of 1/2 a pound of our carefully selected meat grilled and seasoned. Choose how much you want it cooked
+Side: Grilled Potatoes. Boiled potatoes grilled in oven with a touch of butter
+Salad: Soy bean sprout with corn. Soy bean sprout with corn and olives
+Dessert: Ice Cream. Choose among vanilla, mango, pineapple, chocolate and orange ice cream
