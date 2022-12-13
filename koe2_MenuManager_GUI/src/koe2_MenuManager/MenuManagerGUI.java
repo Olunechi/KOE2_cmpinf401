@@ -8,7 +8,7 @@ import javax.swing.border.*;
 
 public class MenuManagerGUI {
 	private JFrame MenuManagerWindow;
-	private JLabel lblEntree, lblSide, lblSalad, lblDessert, lblCreateMenu, lblMenu, lblGenMenu;
+	private JLabel lblEntree, lblSide, lblSalad, lblDessert, lblCreateMenu, lblMenu, lblGenMenu, toCal, toPri;
 	private JComboBox cboEntree, cboSide, cboSalad, cboDessert;
 	private JButton btnCreate, btnGenR, btnDetails, btnMin, btnMax;
 	private JTextArea txtTextMenus, txtTextEnt, txtTextSid, txtTextSal, txtTextDes;
@@ -222,6 +222,8 @@ public class MenuManagerGUI {
 		frmChildWindow = new JFrame("Child Window");
 		frmChildWindow.setBounds(MenuManagerWindow.getX() + 20, MenuManagerWindow.getY() + 20, 500, 500);
 		frmChildWindow.setLayout(null);
+		int ecal = 0;int sidcal = 0;int salcal = 0;int descal = 0;
+		double epri = 0;double sidpri = 0;double salpri = 0;double despri = 0;
 
 		txtTextEnt = new JTextArea();
 		
@@ -276,23 +278,33 @@ txtTextDes.setEditable(false);
 		for(Entree a : MM.getEntrees()) {
 			if(a.getName().equalsIgnoreCase(cboEntree.getSelectedItem().toString())) {
 				txtTextEnt.setText (a.getName()+"\n"+a.getDescription()+" Calories: "+a.getCalories()+" Price: $"+a.getPrice());
-			}
+			ecal = a.getCalories(); epri = a.getPrice();}
 		}
 		for(Side a : MM.getSides()) {
 			if(a.getName().equalsIgnoreCase(cboSide.getSelectedItem().toString())) {
 				txtTextSid.setText (a.getName()+"\n"+a.getDescription()+" Calories: "+a.getCalories()+" Price: $"+a.getPrice());
-			}
+				sidcal = a.getCalories(); sidpri = a.getPrice();}
+
 		}
 		for(Salad a : MM.getSalads()) {
 			if(a.getName().equalsIgnoreCase(cboSalad.getSelectedItem().toString())) {
 				txtTextSal.setText(a.getName()+"\n"+a.getDescription()+" Calories: "+a.getCalories()+" Price: $"+a.getPrice());
-			}
+				salcal = a.getCalories(); salpri = a.getPrice();}
+
 		}
 		for(Dessert a : MM.getDesserts()) {
 			if(a.getName().equalsIgnoreCase(cboDessert.getSelectedItem().toString())) {
 				txtTextDes.setText(a.getName()+"\n"+a.getDescription()+" Calories: "+a.getCalories()+" Price: $"+a.getPrice());
-			}
+				descal = a.getCalories(); despri = a.getPrice();}
+
 		}
+
+		toCal = new JLabel("Total calories: ");
+		toCal.setBounds(lblEntree.getX(), lblDessert.getY() +txtTextEnt.getHeight() + 10, lblEntree.getWidth(), lblEntree.getHeight());
+		frmChildWindow.getContentPane().add(toCal);
+		toPri = new JLabel("Total Price: $");
+		toPri.setBounds(lblEntree.getX(), toCal.getY() +toCal.getHeight() + 10, lblEntree.getWidth(), lblEntree.getHeight());
+		frmChildWindow.getContentPane().add(lblDessert);
 
 		frmChildWindow.setVisible(true);
 	}
