@@ -220,7 +220,7 @@ public class MenuManagerGUI {
 	}
 	private void createChildWindow() {
 		frmChildWindow = new JFrame("Child Window");
-		frmChildWindow.setBounds(MenuManagerWindow.getX() + 20, MenuManagerWindow.getY() + 20, 500, 500);
+		frmChildWindow.setBounds(MenuManagerWindow.getX() + 20, MenuManagerWindow.getY() + 20, 500, 750);
 		frmChildWindow.setLayout(null);
 		int ecal = 0;int sidcal = 0;int salcal = 0;int descal = 0;
 		double epri = 0;double sidpri = 0;double salpri = 0;double despri = 0;
