@@ -220,7 +220,7 @@ public class MenuManagerGUI {
 	}
 	private void createChildWindow() {
 		frmChildWindow = new JFrame("Child Window");
-		frmChildWindow.setBounds(MenuManagerWindow.getX() + 20, MenuManagerWindow.getY() + 20, 750, 750);
+		frmChildWindow.setBounds(MenuManagerWindow.getX() + 20, MenuManagerWindow.getY() + 20, 1000, 1000);
 		txtTextEnt = new JTextArea();
 		
 		lblEntree = new JLabel("Entree: ");
@@ -229,6 +229,9 @@ public class MenuManagerGUI {
 
 		txtTextEnt.setBounds(lblEntree.getX() + lblEntree.getWidth(), lblEntree.getY(), 300, 200);
 		frmChildWindow.getContentPane().add(txtTextEnt);
+		txtTextEnt.setLineWrap(true);
+		txtTextEnt.setWrapStyleWord(true);
+
 		txtTextEnt.setEditable(false);
 		
 		lblSide = new JLabel("Side: ");
@@ -258,14 +261,14 @@ public class MenuManagerGUI {
 		frmChildWindow.getContentPane().add(lblDessert);
 		
 		txtTextDes = new JTextArea();
-		txtTextDes.setBounds(lblDessert.getX() + lblDessert.getWidth(), lblDessert.getY(), 250, 30);
+		txtTextDes.setBounds(lblDessert.getX() + lblDessert.getWidth(), lblDessert.getY()+txtTextEnt.getHeight() + 10, 250, 30);
 		frmChildWindow.getContentPane().add(txtTextDes);
 		txtTextDes.setEditable(false);
 
 		
 		for(Entree a : MM.getEntrees()) {
 			if(a.getName().equalsIgnoreCase(cboEntree.getSelectedItem().toString())) {
-				txtTextEnt.setText (a.getName()+"\n"+a.getDescription().substring(0,a.getDescription().length()/2)+"-\n-"+a.getDescription().substring(a.getDescription().length()/2));
+				txtTextEnt.setText (a.getName()+"\n"+a.getDescription().substring(0,a.getDescription().length()/2)+a.getDescription().substring(a.getDescription().length()/2));
 			}
 		}
 		for(Side a : MM.getSides()) {
