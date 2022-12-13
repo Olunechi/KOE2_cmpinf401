@@ -300,11 +300,11 @@ txtTextDes.setEditable(false);
 		}
 
 		toCal = new JLabel("Total calories: ");
-		toCal.setBounds(lblEntree.getX(), lblDessert.getY() +txtTextEnt.getHeight() + 10, lblEntree.getWidth(), lblEntree.getHeight());
+		toCal.setBounds(lblEntree.getX(), lblDessert.getY() +txtTextEnt.getHeight() + 10, 150, lblEntree.getHeight());
 		frmChildWindow.getContentPane().add(toCal);
 		toPri = new JLabel("Total Price: $");
-		toPri.setBounds(lblEntree.getX(), toCal.getY() +toCal.getHeight() + 10, lblEntree.getWidth(), lblEntree.getHeight());
-		frmChildWindow.getContentPane().add(lblDessert);
+		toPri.setBounds(lblEntree.getX(), toCal.getY() +toCal.getHeight() + 10, 150, lblEntree.getHeight());
+		frmChildWindow.getContentPane().add(toPri);
 
 		frmChildWindow.setVisible(true);
 	}
