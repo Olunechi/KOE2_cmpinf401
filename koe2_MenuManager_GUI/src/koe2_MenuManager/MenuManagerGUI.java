@@ -275,22 +275,22 @@ txtTextDes.setEditable(false);
 		
 		for(Entree a : MM.getEntrees()) {
 			if(a.getName().equalsIgnoreCase(cboEntree.getSelectedItem().toString())) {
-				txtTextEnt.setText (a.getName()+"\n"+a.getDescription()+" Calories: "+a.getCalories()+" Price: "+a.getPrice());
+				txtTextEnt.setText (a.getName()+"\n"+a.getDescription()+" Calories: "+a.getCalories()+" Price: $"+a.getPrice());
 			}
 		}
 		for(Side a : MM.getSides()) {
 			if(a.getName().equalsIgnoreCase(cboSide.getSelectedItem().toString())) {
-				txtTextSid.setText (a.getName()+"\n"+a.getDescription()+" Calories: "+a.getCalories()+" Price: "+a.getPrice());
+				txtTextSid.setText (a.getName()+"\n"+a.getDescription()+" Calories: "+a.getCalories()+" Price: $"+a.getPrice());
 			}
 		}
 		for(Salad a : MM.getSalads()) {
 			if(a.getName().equalsIgnoreCase(cboSalad.getSelectedItem().toString())) {
-				txtTextSal.setText(a.getName()+"\n"+a.getDescription()+" Calories: "+a.getCalories()+" Price: "+a.getPrice());
+				txtTextSal.setText(a.getName()+"\n"+a.getDescription()+" Calories: "+a.getCalories()+" Price: $"+a.getPrice());
 			}
 		}
 		for(Dessert a : MM.getDesserts()) {
 			if(a.getName().equalsIgnoreCase(cboDessert.getSelectedItem().toString())) {
-				txtTextDes.setText(a.getName()+"\n"+a.getDescription()+" Calories: "+a.getCalories()+" Price: "+a.getPrice());
+				txtTextDes.setText(a.getName()+"\n"+a.getDescription()+" Calories: "+a.getCalories()+" Price: $"+a.getPrice());
 			}
 		}
 
