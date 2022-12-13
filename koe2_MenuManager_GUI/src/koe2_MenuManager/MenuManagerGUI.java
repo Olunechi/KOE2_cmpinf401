@@ -129,13 +129,13 @@ public class MenuManagerGUI {
 
 
 		btnDel = new JButton("Delete All");
-		btnDel.setBounds(MenuManagerWindow.getX(), MenuManagerWindow.getY() + MenuManagerWindow.getHeight() - 100, 100, 30);
+		btnDel.setBounds(txtTextMenus.getX(), MenuManagerWindow.getY() + MenuManagerWindow.getHeight() - 100, 100, 30);
 		MenuManagerWindow.getContentPane().add(btnDel);
 		btnSav = new JButton("Save to File");
-		btnSav.setBounds(MenuManagerWindow.getX()+100, MenuManagerWindow.getY() + MenuManagerWindow.getHeight() - 100, 100, 30);
+		btnSav.setBounds(txtTextMenus.getX()+100, MenuManagerWindow.getY() + MenuManagerWindow.getHeight() - 100, 100, 30);
 		MenuManagerWindow.getContentPane().add(btnSav);
 		btnDetails = new JButton("Details");
-		btnDetails.setBounds(MenuManagerWindow.getX()+200, MenuManagerWindow.getY() + MenuManagerWindow.getHeight() - 100, 100, 30);
+		btnDetails.setBounds(txtTextMenus.getX()+200, MenuManagerWindow.getY() + MenuManagerWindow.getHeight() - 100, 100, 30);
 		MenuManagerWindow.getContentPane().add(btnDetails);
 		
 		MenuManagerWindow.setVisible(true);
