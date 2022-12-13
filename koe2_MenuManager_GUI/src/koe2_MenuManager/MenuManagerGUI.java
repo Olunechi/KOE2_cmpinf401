@@ -10,7 +10,7 @@ public class MenuManagerGUI {
 	private JFrame MenuManagerWindow;
 	private JLabel lblEntree, lblSide, lblSalad, lblDessert, lblCreateMenu, lblMenu, lblGenMenu, toCal, toPri;
 	private JComboBox cboEntree, cboSide, cboSalad, cboDessert;
-	private JButton btnCreate, btnGenR, btnDetails, btnMin, btnMax;
+	private JButton btnCreate, btnGenR, btnDetails, btnMin, btnMax, btnDel, btnSav;
 	private JTextArea txtTextMenus, txtTextEnt, txtTextSid, txtTextSal, txtTextDes;
 	
 	private JFrame frmChildWindow;
@@ -128,14 +128,14 @@ public class MenuManagerGUI {
 		txtTextMenus.setEditable(false);
 
 
-		btnDetails = new JButton("Delete All");
-		btnDetails.setBounds(MenuManagerWindow.getX(), MenuManagerWindow.getY() + MenuManagerWindow.getHeight() - 100, 150, 30);
-		MenuManagerWindow.getContentPane().add(btnDetails);
-		btnDetails = new JButton("Save to File");
-		btnDetails.setBounds(MenuManagerWindow.getX(), MenuManagerWindow.getY() + MenuManagerWindow.getHeight() - 100, 150, 30);
-		MenuManagerWindow.getContentPane().add(btnDetails);
+		btnDel = new JButton("Delete All");
+		btnDel.setBounds(MenuManagerWindow.getX(), MenuManagerWindow.getY() + MenuManagerWindow.getHeight() - 100, 150, 30);
+		MenuManagerWindow.getContentPane().add(btnDel);
+		btnSav = new JButton("Save to File");
+		btnSav.setBounds(MenuManagerWindow.getX()+30, MenuManagerWindow.getY() + MenuManagerWindow.getHeight() - 100, 150, 30);
+		MenuManagerWindow.getContentPane().add(btnSav);
 		btnDetails = new JButton("Details");
-		btnDetails.setBounds(MenuManagerWindow.getX(), MenuManagerWindow.getY() + MenuManagerWindow.getHeight() - 100, 150, 30);
+		btnDetails.setBounds(MenuManagerWindow.getX()+60, MenuManagerWindow.getY() + MenuManagerWindow.getHeight() - 100, 150, 30);
 		MenuManagerWindow.getContentPane().add(btnDetails);
 		
 		MenuManagerWindow.setVisible(true);
