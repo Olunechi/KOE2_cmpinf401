@@ -1,0 +1,154 @@
+package koe2_MenuManager;
+
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.FileNotFoundException;
+
+import javax.swing.*;
+
+public class MenuManagerGUI {
+	private JFrame MenuManagerWindow;
+	private JLabel lblEntree, lblSide, lblSalad, lblDessert, lblMenu;
+	private JComboBox cboEntree, cboSide, cboSalad, cboDessert;
+	private JTextField txtAmount;
+	private JButton btnCreate, btnGenR, btnDetails;
+	private JTextArea txtTextBlob;
+	
+	//private JFrame frmChildWindow;
+	
+	private MenuManager MM;
+	
+	public MenuManagerGUI() throws FileNotFoundException {
+		MM = new MenuManager("data/dishes.txt");
+		buildMenuManagerWindow();
+	}
+	
+	private void buildMenuManagerWindow() {
+		MenuManagerWindow = new JFrame("Menu Manager");
+		MenuManagerWindow.setBounds(20, 20, 500, 500);
+		MenuManagerWindow.setLayout(null);
+		
+		// Add a label
+		lblEntree = new JLabel("Entree: ");
+		lblEntree.setBounds(10, 10, 80, 30);
+		MenuManagerWindow.getContentPane().add(lblEntree);
+		
+		// Add a combo box with a list of accounts
+		
+		cboEntree = new JComboBox(MM.getEntrees().toArray());
+		cboEntree.setBounds(lblEntree.getX() + lblEntree.getWidth(), lblEntree.getY(), 150, 30);
+		MenuManagerWindow.getContentPane().add(cboEntree);
+		
+		// Add a textbox for withdrawal and deposit amounts
+		lblSide = new JLabel("Side: ");
+		lblSide.setBounds(lblEntree.getX(), lblEntree.getY() + lblEntree.getHeight() + 10, lblEntree.getWidth(), lblEntree.getHeight());
+		MenuManagerWindow.getContentPane().add(lblSide);
+		
+		// Add a combo box with a list of accounts
+		
+//		cboSide = new JComboBox(MM.getSides().toArray());
+//		cboSide.setBounds(lblSide.getX() + lblSide.getWidth(), lblSide.getY(), 150, 30);
+//		MenuManagerWindow.getContentPane().add(cboSide);
+		
+		// Add a textbox for withdrawal and deposit amounts
+		/*lblSalad = new JLabel("Salad: ");
+		lblSalad.setBounds(lblEntree.getX(), lblSide.getY() + lblEntree.getHeight() + 10, lblEntree.getWidth(), lblEntree.getHeight());
+		MenuManagerWindow.getContentPane().add(lblSalad);
+		
+		// Add a combo box with a list of accounts
+		
+		cboSalad = new JComboBox(MM.getSalads().toArray());
+		cboSalad.setBounds(lblSalad.getX() + lblSalad.getWidth(), lblSalad.getY(), 150, 30);
+		MenuManagerWindow.getContentPane().add(cboSalad);
+		
+		// Add a textbox for withdrawal and deposit amounts
+		lblDessert = new JLabel("Dessert: ");
+		lblDessert.setBounds(lblEntree.getX(), lblSalad.getY() + lblEntree.getHeight() + 10, lblEntree.getWidth(), lblEntree.getHeight());
+		MenuManagerWindow.getContentPane().add(lblDessert);*/
+		
+		// Add buttons
+		btnCreate = new JButton("Create Menu with these dishes");
+		btnCreate.setBounds(txtAmount.getX(), txtAmount.getY() + txtAmount.getHeight() + 10, 100, 30);
+		MenuManagerWindow.getContentPane().add(btnCreate);
+		
+		btnGenR = new JButton("Generate a Random Menu");
+		btnGenR.setBounds(btnCreate.getX() + btnCreate.getWidth() + 5, btnCreate.getY(), 100, 30);
+		MenuManagerWindow.getContentPane().add(btnGenR);
+		
+		// Add report label
+		lblMenu = new JLabel("");
+		lblMenu.setBounds(btnCreate.getX(), btnCreate.getY() + btnCreate.getHeight() + 10, 300, 200);
+		MenuManagerWindow.getContentPane().add(lblMenu);
+		
+		btnDetails = new JButton("Details");
+		btnDetails.setBounds(MenuManagerWindow.getX(), MenuManagerWindow.getY() + MenuManagerWindow.getHeight() - 100, 150, 30);
+		MenuManagerWindow.getContentPane().add(btnDetails);
+		
+		MenuManagerWindow.setVisible(true);
+
+	}
+		
+		// Add event handlers
+		/*btnCreate.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				String selectedAccountNumber = cboEntree.getSelectedItem().toString();
+				Account selectedAccount = bank.findAccountByID(selectedAccountNumber);
+				Double amount = Double.parseDouble(txtAmount.getText());
+				selectedAccount.deposit(amount);
+				lblMenu.setText("Updated balance is $" + selectedAccount.getBalance());
+				
+			}
+		});
+		
+		btnGenR.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				String selectedAccountNumber = cboEntree.getSelectedItem().toString();
+				Account selectedAccount = bank.findAccountByID(selectedAccountNumber);
+				Double amount = Double.parseDouble(txtAmount.getText());
+				selectedAccount.withdraw(amount);
+				lblMenu.setText("Updated balance is $" + selectedAccount.getBalance());
+				
+			}
+		});
+		
+		btnDetails.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				createChildWindow();
+				
+			}
+		});
+		
+		MenuManagerWindow.setVisible(true);
+		
+	}
+	
+	private void createChildWindow() {
+		frmChildWindow = new JFrame("Child Window");
+		frmChildWindow.setBounds(MenuManagerWindow.getX() + 20, MenuManagerWindow.getY() + 20, 400, 300);
+		
+		
+		txtTextBlob = new JTextArea();
+		txtTextBlob.setBounds(10, 10, 200, 100);
+		frmChildWindow.getContentPane().add(txtTextBlob);
+		
+		String selectedAccountNumber = cboEntree.getSelectedItem().toString();
+		Account selectedAccount = bank.findAccountByID(selectedAccountNumber);
+		txtTextBlob.setText(selectedAccount.getAccountNumber() + ": " + selectedAccount.getBalance());
+		
+		frmChildWindow.setVisible(true);
+	}*/
+	
+
+
+public static void main(String[] args) throws FileNotFoundException {
+MenuManagerGUI gui = new MenuManagerGUI();
+}
+
+}

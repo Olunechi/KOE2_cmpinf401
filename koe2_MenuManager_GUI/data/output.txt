@@ -1,0 +1,31 @@
+Menu name: Menu1 Total Calories: 1170 total Price: 27.2 Descripetion: Entree: Deep fried chicken breasts. Deep fried chicken breasts using our traditional powder receipt
+Side: Grilled Potatoes. Boiled potatoes grilled in oven with a touch of butter
+Salad: Mixed Vegetables. Includes small tomatoes, lettuce, cucumber, spinach and arugula
+Dessert: Ice Cream. Choose among vanilla, mango, pineapple, chocolate and orange ice creamMenu name: Menu2 Total Calories: 1160 total Price: 24.7 Descripetion: Entree: Curry Chicken. Curry marinated chicken, cooked slowly in wood fire oven
+Side: Grilled Potatoes. Boiled potatoes grilled in oven with a touch of butter
+Salad: Soy bean sprout with corn. Soy bean sprout with corn and olives
+Dessert: Ice Cream. Choose among vanilla, mango, pineapple, chocolate and orange ice creamMenu name: Menu3 Total Calories: 1040 total Price: 26.7 Descripetion: Entree: Curry Chicken. Curry marinated chicken, cooked slowly in wood fire oven
+Side: Grilled Potatoes. Boiled potatoes grilled in oven with a touch of butter
+Salad: Mixed Vegetables. Includes small tomatoes, lettuce, cucumber, spinach and arugula
+Dessert: Ice Cream. Choose among vanilla, mango, pineapple, chocolate and orange ice creamMenu name: Menu4 Total Calories: 1405 total Price: 34.4 Descripetion: Entree: Sirloin Steak. A delicious piece of 1/2 a pound of our carefully selected meat grilled and seasoned. Choose how much you want it cooked
+Side: Quinoa. Quinoa
+Salad: Potato Salad. Potato Salad
+Dessert: Ice Cream. Choose among vanilla, mango, pineapple, chocolate and orange ice creamMenu name: Menu5 Total Calories: 1240 total Price: 27.0 Descripetion: Entree: Deep fried chicken breasts. Deep fried chicken breasts using our traditional powder receipt
+Side: Grilled Potatoes. Boiled potatoes grilled in oven with a touch of butter
+Salad: Soy bean sprout with corn. Soy bean sprout with corn and olives
+Dessert: Fruit Salad. Oranges, bananas, apples, grapes, strawberriesMenu name: Menu6 Total Calories: 1550 total Price: 35.7 Descripetion: Entree: Sirloin Steak. A delicious piece of 1/2 a pound of our carefully selected meat grilled and seasoned. Choose how much you want it cooked
+Side: Grilled Potatoes. Boiled potatoes grilled in oven with a touch of butter
+Salad: Soy bean sprout with corn. Soy bean sprout with corn and olives
+Dessert: Ice Cream. Choose among vanilla, mango, pineapple, chocolate and orange ice creamMenu name: Menu7 Total Calories: 1355 total Price: 36.2 Descripetion: Entree: Sirloin Steak. A delicious piece of 1/2 a pound of our carefully selected meat grilled and seasoned. Choose how much you want it cooked
+Side: Quinoa. Quinoa
+Salad: Potato Salad. Potato Salad
+Dessert: Fruit Salad. Oranges, bananas, apples, grapes, strawberriesMenu name: Menu8 Total Calories: 910 total Price: 24.0 Descripetion: Entree: Curry Chicken. Curry marinated chicken, cooked slowly in wood fire oven
+Side: Rice. Plain rice
+Salad: Quinoa. Quinoa lightly salted
+Dessert: Fruit Salad. Oranges, bananas, apples, grapes, strawberriesMenu name: Menu9 Total Calories: 1015 total Price: 23.4 Descripetion: Entree: Curry Chicken. Curry marinated chicken, cooked slowly in wood fire oven
+Side: Quinoa. Quinoa
+Salad: Potato Salad. Potato Salad
+Dessert: Ice Cream. Choose among vanilla, mango, pineapple, chocolate and orange ice creamMenu name: Menu10 Total Calories: 1300 total Price: 35.0 Descripetion: Entree: Sirloin Steak. A delicious piece of 1/2 a pound of our carefully selected meat grilled and seasoned. Choose how much you want it cooked
+Side: Rice. Plain rice
+Salad: Quinoa. Quinoa lightly salted
+Dessert: Fruit Salad. Oranges, bananas, apples, grapes, strawberries
