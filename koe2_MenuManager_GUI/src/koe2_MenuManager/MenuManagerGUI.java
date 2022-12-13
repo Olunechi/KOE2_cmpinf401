@@ -220,18 +220,19 @@ public class MenuManagerGUI {
 	}
 	private void createChildWindow() {
 		frmChildWindow = new JFrame("Child Window");
-		frmChildWindow.setBounds(MenuManagerWindow.getX() + 20, MenuManagerWindow.getY() + 20, 1000, 1000);
+		frmChildWindow.setBounds(MenuManagerWindow.getX() + 20, MenuManagerWindow.getY() + 20, 500, 500);
+		frmChildWindow.setLayout(null);
+
 		txtTextEnt = new JTextArea();
 		
 		lblEntree = new JLabel("Entree: ");
 		lblEntree.setBounds(10, 20, 80, 30);
 		frmChildWindow.getContentPane().add(lblEntree);
 
-		txtTextEnt.setBounds(lblEntree.getX() + lblEntree.getWidth(), lblEntree.getY(), 300, 200);
+		txtTextEnt.setBounds(lblEntree.getX() + lblEntree.getWidth(), lblEntree.getY(), 300, 100);
 		frmChildWindow.getContentPane().add(txtTextEnt);
 		txtTextEnt.setLineWrap(true);
 		txtTextEnt.setWrapStyleWord(true);
-
 		txtTextEnt.setEditable(false);
 		
 		lblSide = new JLabel("Side: ");
@@ -239,9 +240,11 @@ public class MenuManagerGUI {
 		frmChildWindow.getContentPane().add(lblSide);
 		
 		txtTextSid = new JTextArea();
-		txtTextSid.setBounds(lblSide.getX() + lblSide.getWidth(), lblSide.getY(), 250, 30);
+		txtTextSid.setBounds(lblSide.getX() + lblSide.getWidth(), lblSide.getY(), 250, 100);
 		frmChildWindow.getContentPane().add(txtTextSid);
-		txtTextSid.setEditable(false);
+		txtTextSid.setLineWrap(true);
+		txtTextSid.setWrapStyleWord(true);
+txtTextSid.setEditable(false);
 
 		// Add a textbox for withdrawal and deposit amounts
 		lblSalad = new JLabel("Salad: ");
@@ -251,9 +254,11 @@ public class MenuManagerGUI {
 		// Add a combo box with a list of accounts
 		
 		txtTextSal = new JTextArea();
-		txtTextSal.setBounds(lblSalad.getX() + lblSalad.getWidth(), lblSalad.getY(), 250, 30);
+		txtTextSal.setBounds(lblSalad.getX() + lblSalad.getWidth(), lblSalad.getY(), 250, 100);
 		frmChildWindow.getContentPane().add(txtTextSal);
-		txtTextSal.setEditable(false);
+		txtTextSal.setLineWrap(true);
+		txtTextSal.setWrapStyleWord(true);
+txtTextSal.setEditable(false);
 
 		// Add a textbox for withdrawal and deposit amounts
 		lblDessert = new JLabel("Dessert: ");
@@ -261,29 +266,31 @@ public class MenuManagerGUI {
 		frmChildWindow.getContentPane().add(lblDessert);
 		
 		txtTextDes = new JTextArea();
-		txtTextDes.setBounds(lblDessert.getX() + lblDessert.getWidth(), lblDessert.getY()+txtTextEnt.getHeight() + 10, 250, 30);
+		txtTextDes.setBounds(lblDessert.getX() + lblDessert.getWidth(), lblDessert.getY() + 10, 250, 100);
 		frmChildWindow.getContentPane().add(txtTextDes);
-		txtTextDes.setEditable(false);
+		txtTextDes.setLineWrap(true);
+		txtTextDes.setWrapStyleWord(true);
+txtTextDes.setEditable(false);
 
 		
 		for(Entree a : MM.getEntrees()) {
 			if(a.getName().equalsIgnoreCase(cboEntree.getSelectedItem().toString())) {
-				txtTextEnt.setText (a.getName()+"\n"+a.getDescription().substring(0,a.getDescription().length()/2)+a.getDescription().substring(a.getDescription().length()/2));
+				txtTextEnt.setText (a.getName()+"\n"+a.getDescription()+" Calories: "+a.getCalories()+" Price: "+a.getPrice());
 			}
 		}
 		for(Side a : MM.getSides()) {
 			if(a.getName().equalsIgnoreCase(cboSide.getSelectedItem().toString())) {
-				txtTextSid.setText (a.getName()+"\n"+a.getDescription().substring(0,a.getDescription().length()/2)+"-\n-"+a.getDescription().substring(a.getDescription().length()/2));
+				txtTextSid.setText (a.getName()+"\n"+a.getDescription()+" Calories: "+a.getCalories()+" Price: "+a.getPrice());
 			}
 		}
 		for(Salad a : MM.getSalads()) {
 			if(a.getName().equalsIgnoreCase(cboSalad.getSelectedItem().toString())) {
-				txtTextSal.setText (a.getName()+"\n"+a.getDescription().substring(0,a.getDescription().length()/2)+"-\n-"+a.getDescription().substring(a.getDescription().length()/2));
+				txtTextSal.setText(a.getName()+"\n"+a.getDescription()+" Calories: "+a.getCalories()+" Price: "+a.getPrice());
 			}
 		}
 		for(Dessert a : MM.getDesserts()) {
 			if(a.getName().equalsIgnoreCase(cboDessert.getSelectedItem().toString())) {
-				txtTextDes.setText (a.getName()+"\n"+a.getDescription().substring(0,a.getDescription().length()/2)+"-\n-"+a.getDescription().substring(a.getDescription().length()/2));
+				txtTextDes.setText(a.getName()+"\n"+a.getDescription()+" Calories: "+a.getCalories()+" Price: "+a.getPrice());
 			}
 		}
 
